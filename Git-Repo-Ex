@@ -1,0 +1,72 @@
+ls -la :-  (all files of folder)
+
+notepad .gitignore (Open files )
+
+
+1. git --version	//for check git version
+2. git status		// always your first command
+
+3. git init		//To initialize git repository(it not initialized)(created hidden .git folder)
+4. git add .		// Working to Staging Area
+
+5. git commit -m "Message"		// To Commit
+6. git log 		// Look the all changes(commits)(Generates SSH like checksum 40digit hexadecimal number)
+
+7. git config --global user.name "YourName"	or git config user.name "Name"	//(--global)-for all repository
+   git config --global user.email "YourEmail"	or git config user.email "email"
+
+8.Set remote origin:- (Set only one time)
+	1. git remote add origin <SSh of repository>
+	2. Settings -> SSH and GPG key -> New SSh key --> Guide
+	3. -> Generating a new SSh key and adding it to ssh-agent
+	4. ->Follow the commands
+		1. ssh-keygen -t rsa -b 4096 -C "your_email@example.com"(Generating public/private rsa key pair.)
+		2. > Enter a file in which to save the key (/c/Users/you/.ssh/id_rsa):[Press enter]
+		3. > Enter passphrase (empty for no passphrase): [Type a passphrase](not necessary)
+		   > Enter same passphrase again: [Type passphrase again]
+	5. Adding your SSH key to the ssh-agent
+		1.  eval $(ssh-agent -s)
+		2. ssh-add ~/.ssh/id_rsa
+	6. Adding a new ssh key to your github account
+		1. clip < ~/.ssh/id_rsa.pub  (copy to clipboard)
+		2. Paste on ssh key tab(Added key)
+
+9. git push -u orgin master (To push data computer to github) ('-u' i.e next time you write:- git push origin master)
+10. git pull origin master (Pull data from github to computer)
+
+11. diff commands:- 
+	1. git diff <file name> (or) git diff -> press enter  (For non staged file)
+	2. git diff --staged <file name> (or) git diff --staged -> press enter  (For staged file)
+ 
+12. To Unstaged File:- 
+	1. git reset <filename>
+13. Back to Previous commit :-
+	1.  git checkout <filename> 
+	2.  git checkout . 	(for all files)
+
+14. Types of Staging: 
+	1. git add -A (Stages all) (Commanly)
+	2. git add . (stages new and modified,Without deleted)
+	3. git add -u (Stages modified and deleted,without new)
+
+15. Cloning a Git Repository: 
+	1. git clone <Ssh of repository>  (Create seperate folder automatically)
+	2. git clone <Ssh of repository> .  (Do not create folder)
+
+16. Ignoring files:  
+	1. touch .gitignore (Making ignoring files)
+	2. Ignoring files (Search google For documentations)(Important in future)
+
+17. Branching:-
+	1. git branch  	(show all the branches)
+	2. git branch <branch-Name>		(Create new branch)
+	3. git checkout <branch-Name>		(Switch branch)
+	4. git merge <branch-name>		(Merge branch to master)
+	5. git branch -d <branch-name>		(Delete branch from local)
+	6. git push origin --delete <branch-name>	(Delete branch from github(remote repository))
+
+
+18. git push -f origin main
+19  git remote set-url origin <Http url>
+	
+		
